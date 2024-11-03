@@ -2776,6 +2776,23 @@ fieldset:disabled a.btn {
   border-color: #695aa6;
 }
 
+.btn-social {
+  color: #695aa6;
+  border-color: #695aa6;
+  border-radius: 9999px; /* This ensures a fully rounded border */
+  padding: 0.5rem 1rem; /* Adjust padding as needed */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-social:hover {
+  color: #fff;
+  background-color: #695aa6;
+}
+.social-buttons {
+  margin-top: 60px; /* Adjust this value as needed */
+}
+
 .btn-primary:hover {
   color: #fff;
   background-color: #594c8d;
