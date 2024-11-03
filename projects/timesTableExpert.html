@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Times Table Expert Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            display: flex;
+            align-items: center;
+            padding: 20px 120px; /* Equal padding on left and right */
+            background-color: #f0f0f0;
+        }
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 10%;
+            margin-right: 15px;
+        }
+        .app-name {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .content-section {
+            display: flex;
+            padding: 40px 100px 40px 100px; /* Top Right Bottom Left */
+            align-items: center;
+        }
+        .content-section:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        .description {
+            flex: 1;
+            padding: 0 40px;
+        }
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: visible;
+        }
+        .mobile-device {
+            width: 300px;
+            height: 600px;
+            background-color: #000;
+            border-radius: 40px;
+            padding: 20px;
+            box-shadow: 0 0 50px rgba(0,0,0,0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .app-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+        .animate-left {
+            transform: translateX(-100%);
+            transition: transform 1s ease-out;
+        }
+        .animate-right {
+            transform: translateX(100%);
+            transition: transform 1s ease-out;
+        }
+        .visible {
+            transform: translateX(0);
+        }
+        .app-store-button {
+            display: inline-block;
+            margin-top: 15px; /* Space between text and button */
+        }
+        .app-store-image {
+            width: 150px; 
+            height: auto;
+        }
+
+        .app-store-button:hover {
+            transform: scale(1.05); /* Makes the button slightly bigger on hover */
+        }  
+        .contact-form {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        .contact-form button {
+            align-self: center;
+            padding: 10px 20px; 
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 120px;
+        }
+
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            background-color: #f0f0f0; /* Match your header background */
+            padding: 20px 0; /* Top and bottom padding */
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between; /* Space between copyright and privacy policy */
+            align-items: center; /* Center vertically */
+            max-width: 1200px; /* Set a max width for content */
+            margin: 0 auto; /* Center the footer */
+            padding: 0 80px; /* Horizontal padding */
+        }
+
+        .copyright {
+            margin: 0; /* Remove default margin */
+        }
+
+        .privacy-footer-link {
+            text-decoration: none; /* Remove underline */
+            color: #333; /* Text color */
+        }
+
+        .privacy-footer-link:hover {
+            text-decoration: underline; /* Underline on hover */
+        }    
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <img src="media/TimesTableExpert-Icon.png" alt="Times Table Expert Logo" class="logo">
+        <div class="app-name">Times Table Expert</div>
+    </header>
+
+    <div class="content-section">
+        <div class="image-container">
+            <img src="media/home.png" alt="Times Table Expert Screenshot" class="app-image">
+        </div>
+        <div class="description">
+            <h1>Multiply Your Skills, Master the Table!</h1>
+            <ul>
+                <li>😊 Simple & User-Friendly</li>
+                <li>🎨 Vibrant Backgrounds</li>
+                <li>📚 Hands-On Learning</li>
+            </ul>
+            <p>Download the <strong>Times Table Expert</strong> app now!</p>
+            <a 
+                aria-label="App Store" 
+                rel="noreferrer noopener" 
+                target="_blank" 
+                href="https://apps.apple.com/app/your-app-id" 
+                class="app-store-button"
+            >
+                <img src="media/appStore.png" alt="Download on the App Store" class="app-store-image">
+            </a>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="image-container">
+            <div class="animate-right">
+                <img src="media/learn.png" alt="Times Table Expert Screenshot" class="app-image">
+            </div>
+        </div>
+        <div class="description">
+            <h2>Explore our interactive learning view that makes mastering multiplication engaging and fun!</h2>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="image-container">
+            <div class="animate-left">
+                <img src="media/practice.png" alt="Times Table Expert Screenshot" class="app-image">
+            </div>
+        </div>
+        <div class="description">
+            <h2>Build Skills, Level by Level! 🚀</h2>
+            <p>Boost multiplication skills with engaging practice options:</p>
+            <ul>
+                <li>🧩 <strong>Sequence Mode:</strong> Practice each table in order, perfect for building a strong foundation.</li>
+                <li>🔄 <strong>Shuffled Mode:</strong> Mix it up for a real challenge and test memory retention.</li>
+                <li>✅ <strong>Multiple Choice:</strong> Quick, fun quizzes to build confidence with each level.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content-section">
+        <div class="image-container">
+            <div class="animate-right">
+                <img src="media/quiz.png" alt="Times Table Expert Screenshot" class="app-image">
+            </div>
+        </div>
+        <div class="description">
+            <h2>Customize Your Quiz Experience!</h2>
+            <p>Monitor your improvement and celebrate your achievements as you advance.</p>
+            <ul>
+                <li>🔢 Select Your Table Range for Targeted Practice</li>
+                <li>❓ Choose the Number of Questions according to user comfort</li>
+                <li>⏳ Take Timed Quizzes to Measure Your Proficiency!</li>
+                <li>📊 Track Your Score Details!</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <label for="name">Name:</label>
+          <input type="hidden" name="access_key" value="7e00ce8f-e055-4dfe-82d3-18d3c881cae6">
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          
+          <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">&copy; 2024 Times Table Expert. All rights reserved.</p>
+            <a href="https://www.termsfeed.com/live/27b08e07-41cc-4815-8559-c3346fd67abe" target="_blank" class="privacy-footer-link">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script>
+        let lastScrollTop = 0;
+
+        function handleScroll() {
+            const images = document.querySelectorAll('.animate-left, .animate-right');
+            const st = window.pageYOffset || document.documentElement.scrollTop;
+            
+            images.forEach(image => {
+                const imagePosition = image.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+
+                if (st > lastScrollTop) {
+                    // Scrolling down
+                    if (imagePosition < screenPosition) {
+                        image.classList.add('visible');
+                    }
+                } else {
+                    // Scrolling up
+                    if (imagePosition > screenPosition) {
+                        image.classList.remove('visible');
+                    }
+                }
+            });
+            
+            lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+        }
+
+        window.addEventListener('scroll', handleScroll);
+    </script>
+</body>
+</html>
