@@ -4,111 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pollinators App for visionOS</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            line-height: 1.6;
-            color: #fff;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #04615a, #0a8e3c);
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-        .header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-        .logo {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-right: 15px;
-        }
-        h1 {
-            font-size: 2.5em;
-            color: #fff;
-        }
-        h2 {
-            color: #fff;
-        }
-        .content-wrapper {
-            display: flex;
-            align-items: flex-start;
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        .description {
-            flex: 1;
-            font-size: 24px;
-        }
-        .video-container {
-            flex: 1;
-            position: relative;
-            padding-bottom: 30%;
-            overflow: hidden;
-            border-radius: 12px;
-        }
-        .video-container video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 12px;
-        }
-        @media (max-width: 768px) {
-            .content-wrapper {
-                flex-direction: column;
-            }
-        }
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        .feature-item {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 20px;
-            transition: transform 0.3s ease;
-        }
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
-        .feature-icon {
-            font-size: 2em;
-            margin-bottom: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/projectStyle.css">
 </head>
 <body>
+    <header class="header">
+        <div class="header-left">
+            <img src="media/Pollinators_Icon.png" alt="Pollinators Logo" class="logo-round">
+            <div class="app-name">Pollinators</div>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="https://runaalam.com">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
     <div class="container">
-        <header class="header">
-            <img src="media/Pollinators_Icon.png" alt="Pollinators Logo" class="logo">
-            <h1>Pollinators</h1>
-        </header>
-
-        <div class="content-wrapper">
-            <p class="description">Discover Pollinator, an AR app for Apple Vision Pro that brings the mesmerizing world of pollinators right before your eyes. Dive into the beauty of pollination and explore its intricate details up close in vivid 3D!</p>
-            
-            <div class="video-container">
-                <video controls>
-                    <source src="media/PollinatorsWebDemo.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
+    <div class="content-wrapper">
+        <p class="description">Discover Pollinator, an AR app for Apple Vision Pro that brings the mesmerizing world of pollinators right before your eyes. Dive into the beauty of pollination and explore its intricate details up close in vivid 3D!</p>
+        
+        <div class="video-container">
+            <video controls>
+                <source src="media/PollinatorsWebDemo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
+    </div>
 
-        <div>
-            <h2>Key Features</h2>
-        </div>
-        <div class="features">
+    <div class="features-section">
+        <h2>Key Features</h2>
+        <div class="feature-container">
             <div class="feature-item">
                 <div class="feature-icon">🌟</div>
                 <h3>Immersive Experience</h3>
@@ -130,11 +56,31 @@
                 <p>Providing detailed explanations and enhancing accessibility.</p>
             </div>
         </div>
-
-        <!-- Copyright Footer -->
-        <footer style="text-align:center; margin-top:40px; color:#fff;">
-            <p>&copy; 2024 Pollinators. All rights reserved.</p>
-        </footer>
     </div>
+        
+    <section class="contact-form" id="contact">
+        <h2>Contact Us</h2>
+        <form action="https://api.web3forms.com/submit" method="POST">
+          <label for="name">Name:</label>
+          <input type="hidden" name="access_key" value="7e00ce8f-e055-4dfe-82d3-18d3c881cae6">
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+          
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required></textarea>
+          
+          <button type="submit">Send</button>
+        </form>
+    </section>     
+    
+</div>
+    <!-- Copyright Footer -->
+    <footer>
+        <div class="footer-content">
+            <p class="copyright">&copy; 2024 Pollinators. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
