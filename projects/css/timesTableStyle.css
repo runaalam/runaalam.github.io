@@ -18,11 +18,58 @@ body {
     transform: translateX(0);
 }
 
-header {
+.header {
+    display: flex;
+    justify-content: space-between; /* Space between logo/app name and nav */
+    align-items: center;
+    padding: 20px 120px; /* Equal padding on left and right */
+    background-color: #f0f0f0;
+}
+
+.header-left {
     display: flex;
     align-items: center;
-    padding: 20px;
-    background-color: #f0f0f0;
+}
+
+.header-nav ul {
+    display: flex; /* Use flexbox for horizontal layout */
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+.header-nav li {
+    margin-left: 20px; /* Space between nav items */
+}
+
+.header-nav a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Text color */
+    font-weight: bold;
+}
+
+.header-nav a:hover {
+    color: #007bff; /* Change color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        padding: 20px; /* Reduce padding for smaller screens */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .header-nav ul {
+        flex-direction: column; /* Stack nav items vertically */
+        align-items: flex-start; /* Align items to the left */
+        margin-top: 10px; /* Space above nav */
+    }
+
+    .header-nav li {
+        margin-left: 0; /* Remove left margin for stacked items */
+        margin-bottom: 10px; /* Space between stacked items */
+    }
 }
 
 .logo {
