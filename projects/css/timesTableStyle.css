@@ -1,0 +1,239 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container .animate-right {
+    transform: translateX(-100%);
+    transition: transform 1s ease-out;
+}
+
+.main-container .animate-left {
+    transform: translateX(100%);
+    transition: transform 1s ease-out;
+}
+
+.main-container .visible {
+    transform: translateX(0);
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 10%;
+    margin-right: 15px;
+}
+
+.app-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.content-section {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+}
+
+.description {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.mobile-device {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 1/2;
+    background-color: #000;
+    border-radius: 40px;
+    padding: 20px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.app-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.animate-left, .animate-right {
+    transform: translateX(0);
+    transition: transform 1s ease-out;
+}
+
+.visible {
+    transform: translateX(0);
+}
+
+.app-store-button {
+    display: inline-block;
+    margin-top: 15px;
+}
+
+.app-store-image {
+    width: 150px;
+    height: auto;
+}
+
+.app-store-button:hover {
+    transform: scale(1.05);
+}
+
+.contact-form {
+    max-width: 100%;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    align-self: center;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 120px;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+footer {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.copyright {
+    margin: 0 0 10px 0;
+}
+
+.privacy-footer-link {
+    text-decoration: none;
+    color: #333;
+}
+
+.privacy-footer-link:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+    header {
+        padding: 20px 120px;
+    }
+
+    .logo {
+        width: 80px;
+        height: 80px;
+    }
+
+    .app-name {
+        font-size: 24px;
+    }
+
+    .content-section {
+        flex-direction: row;
+        padding: 40px 100px;
+    }
+
+    .content-section:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+
+    .description {
+        flex: 1;
+        padding: 0 40px;
+        text-align: left;
+    }
+
+    .image-container {
+        flex: 1;
+        max-width: none;
+        margin: 0;
+    }
+
+    .contact-form {
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 30px;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 0 80px;
+    }
+
+    .copyright {
+        margin: 0;
+    }
+} 
