@@ -11287,7 +11287,7 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #969595;
+  background-color: #695aa6;
   color: #fff;
   padding: 10px 20px;
   border-radius: 5px;
@@ -11297,7 +11297,7 @@ p {
   width: 160px;
 }
 .button-dark:hover {
-   background-color: #555; 
+   background-color: #6f42c1;; 
    color: #fff;
    transform: scale(1.05);
 }
